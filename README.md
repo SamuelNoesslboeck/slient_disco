@@ -1,1 +1,1 @@
-# Silent Disko - Server
+# Silent Disco - Server

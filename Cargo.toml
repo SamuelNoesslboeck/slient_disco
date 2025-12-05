@@ -4,7 +4,20 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+ewebsock = "0.8.0"
+futures = "0.3.31"
 log = "0.4.29"
+rocket = "0.5.1"
+rocket_ws = "0.1.1"
 ruhear = "0.1.0"
 simplelog = "0.12.2"
 wasapi = "0.22.0"
+websocket = "0.27.1"
+
+[[bin]]
+name = "mic_server"
+path = "bin/mic_server.rs"
+
+[[bin]]
+name = "mic_client"
+path = "bin/mic_client.rs"
