@@ -1,1 +1,6 @@
-/target
+# Rust
+target
+Cargo.lock
+
+# Data
+*.raw
