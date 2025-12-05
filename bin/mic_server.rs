@@ -2,7 +2,7 @@ use std::collections::VecDeque;
 use std::error;
 use std::sync::mpsc;
 use std::thread;
-use rocket::futures::SinkExt;
+use rocket::{fs::FileServer, futures::SinkExt};
 use wasapi::*;
 
 use std::{
@@ -16,8 +16,6 @@ use std::{
 #[macro_use]
 extern crate log;
 use simplelog::*;
-
-type Res<T> = Result<T, Box<dyn error::Error>>;
 
 #[get("/mic")]
 fn echo_stream(ws: rocket_ws::WebSocket) -> rocket_ws::Channel<'static> {
@@ -107,4 +105,5 @@ fn rocket() -> _ {
         index,
         echo_stream
     ])
+    .mount("/", FileServer::new("./www", Default::default()))
 }

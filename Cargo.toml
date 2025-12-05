@@ -11,6 +11,7 @@ rocket = "0.5.1"
 rocket_ws = "0.1.1"
 ruhear = "0.1.0"
 simplelog = "0.12.2"
+tokio = "1.48.0"
 wasapi = "0.22.0"
 websocket = "0.27.1"
 
